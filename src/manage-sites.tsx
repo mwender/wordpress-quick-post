@@ -145,12 +145,10 @@ function SiteForm({
     if (!initialSite) return undefined;
 
     return {
-      name: initialSite.name,
-      baseUrl: initialSite.baseUrl,
-      restBase: initialSite.restBase,
+      ...initialSite,
       username: initialSite.credentials.username,
       applicationPassword: initialSite.credentials.applicationPassword,
-    } satisfies Partial<FormValues>;
+    };
   }, [initialSite]);
 
   const handleSubmit = async (values: FormValues) => {
@@ -185,7 +183,7 @@ function SiteForm({
       <Form.TextField id="baseUrl" title="Base URL" placeholder="https://example.com" />
       <Form.TextField id="restBase" title="REST Base" defaultValue="/wp-json/wp/v2/" placeholder="/wp-json/wp/v2/" />
       <Form.Separator />
-      <Form.TextField id="username" title="Username" />
+      <Form.TextField id="username" title="Username" autoCapitalize={Form.TextField.AutoCapitalize.None} />
       <Form.PasswordField id="applicationPassword" title="Application Password" />
     </Form>
   );
