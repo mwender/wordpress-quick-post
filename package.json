@@ -26,7 +26,7 @@
       "name": "manage-sites",
       "title": "Manage Sites",
       "description": "Add/edit/delete WordPress site profiles",
-      "mode": "no-view"
+      "mode": "view"
     }
   ],
   "dependencies": {
