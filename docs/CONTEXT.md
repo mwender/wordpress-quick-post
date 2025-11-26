@@ -131,15 +131,17 @@ Expected repository structure:
 ```
 raycast-wordpress/
   src/
+    create-post.tsx
+    manage-sites.tsx
+    upload-media.tsx
     api/
       wordpress.ts
-    commands/
-      create-post.tsx
-      manage-sites.tsx
-      upload-media.tsx
     storage/
+      sites.ts
     ui/
+      form-components.tsx
     utils/
+      convert-webp.ts
   docs/
     CONTEXT.md
   package.json
