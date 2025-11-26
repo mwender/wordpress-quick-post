@@ -66,11 +66,7 @@ export default function ManageSitesCommand() {
       <List.EmptyView
         title="No sites configured"
         description="Add a WordPress site to get started"
-        actions={
-          <ActionPanel>
-            <AddSiteAction onSave={handleSave} />
-          </ActionPanel>
-        }
+        actions={<AddSiteAction onSave={handleSave} />}
         icon={Icon.Plus}
       />
 
