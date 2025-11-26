@@ -134,7 +134,7 @@ raycast-wordpress/
     api/
       wordpress.ts
     commands/
-      quick-post.tsx
+      create-post.tsx
       manage-sites.tsx
       upload-media.tsx
     storage/
