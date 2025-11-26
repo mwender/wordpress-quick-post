@@ -68,7 +68,11 @@ export default function ManageSitesCommand() {
         description="Add a WordPress site to get started"
         actions={
           <ActionPanel>
-            <AddSiteAction onSave={handleSave} />
+            <Action.Push
+              title="Add Site"
+              icon={Icon.Plus}
+              target={<SiteForm onSave={handleSave} />}
+            />
           </ActionPanel>
         }
         icon={Icon.Plus}
@@ -179,7 +183,7 @@ function SiteForm({
       <Form.TextField id="baseUrl" title="Base URL" placeholder="https://example.com" />
       <Form.TextField id="restBase" title="REST Base" defaultValue="/wp-json/wp/v2/" placeholder="/wp-json/wp/v2/" />
       <Form.Separator />
-      <Form.TextField id="username" title="Username" />
+      <Form.TextField id="username" title="Username" autoCapitalize={Form.TextField.AutoCapitalize.None} />
       <Form.PasswordField id="applicationPassword" title="Application Password" />
     </Form>
   );
